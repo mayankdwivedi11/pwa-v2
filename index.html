@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Snippets</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', Times, serif ;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        header {
+            background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        }
+        header .container {
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            height: calc(100vh - 200px);
+            overflow: auto;
+            padding: 30px 15px;
+        }
+        h1 {
+            height: 200px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        h3 {
+            margin-bottom: 20px;
+            color: #536e7a;
+        }
+        h4 {
+            margin-bottom: 10px;
+            color: #354052;
+        }
+        p {
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #354052;
+        }   
+        section {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: #5227C0;
+            display: block;
+            padding: 10px 0;
+        }
+        footer {
+            padding: 20px 0;
+        }
+        @media only screen and (max-width: 640px) {
+            main {
+                padding: 30px 30px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Learn About PWA's in a Jiffy!</h1>
+            <figure>
+                <img src="/images/pwa-logo.png" alt="">
+            </figure>
+        </div>      
+    </header>
+    <main class="container">
+        <section class="about-pwa">
+            <h2>What are PWA Apps?</h2>
+                <p>The web is an incredible platform. Its mix of ubiquity across devices and operating systems, its user-centered security model, and the fact that neither its specification nor its implementation is controlled by a single company makes the web a unique platform to develop software on. Combined with its inherent linkability, it's possible to search it and share what you've found with anyone, anywhere. Whenever you go to a website, it's up-to-date, and your experience with that site can be as ephemeral or as permanent as you'd like. Web applications can reach anyone, anywhere, on any device with a single codebase. </p>
+
+                <p>Native applications, are known for being incredibly rich and reliable. They're ever-present, on home screens, docks, and taskbars. They work regardless of network connection. They launch in their own standalone experience. They can read and write files from the local file system, access hardware connected via USB, serial or bluetooth, and even interact with data stored on your device, like contacts and calendar events. In native applications, you can do things like take pictures, see playing songs listed on the home screen, or control song playback while in another app. Native applications feel like part of the device they run on.</p>
+
+                <p>If you think about native apps and web apps in terms of capabilities and reach, native apps represent the best of capabilities whereas web apps represent the best of reach. So where do Progressive Web Apps fit in?
+
+                <p>Progressive Web Apps (PWA) are built and enhanced with modern APIs to deliver native-like capabilities, reliability, and installability while reaching anyone, anywhere, on any device with a single codebase.</p>
+        </section>
+        <section class="pwa-pillers">
+            <h2>Three Pillers of PWA Apps</h2>
+                <p>Progressive Web Apps are web applications that have been designed so they are capable, reliable, and installable. These three pillars transform them into an experience that feels like a native application.</p>
+                <h3>Capable</h3>
+                    <p>The web is quite capable in its own right today. For example, you can build a hyper-local video chat app using WebRTC, geolocation, and push notifications. You can make that app installable and take those conversations virtual with WebGL and WebVR. With the introduction of Web Assembly, developers can tap into other ecosystems, like C, C++, and Rust, and bring decades of work and capabilities to the web too. Squoosh.app, for instance, leverages this for its advanced image compression.
+
+                    <p>Until recently, only native apps could really lay claim to these capabilities. While some capabilities are still out of the web's reach, new and upcoming APIs are looking to change that, expanding what the web can do with features like file system access, media controls, app badging, and full clipboard support. All of these capabilities are built with the web's secure, user-centric permission model, ensuring that going to a website is never a scary proposition for users.</p> 
+
+                    <p>Between modern APIs, Web Assembly, and new and upcoming APIs, web applications are more capable than ever, and those capabilities are only growing.</p>
+                <h3>Reliable</h3>  
+                    <p>A reliable Progressive Web App feels fast and dependable regardless of the network.</p>
+
+                    <p>Speed is critical for getting users to use your experience. In fact, as page load times go from 1 second to ten seconds, the probability of a user bouncing increases by 123%. Performance doesn't stop after the onload event. Users should never wonder whether their interaction—for example, clicking a button—was registered or not. Scrolling and animation should feel smooth. Performance affects your entire experience, from how users perceive your application to how it actually performs.</p>
+
+                    <p>Finally, reliable applications need to be usable regardless of network connection. Users expect apps to start up on slow or flaky network connections or even when offline. They expect the most recent content they've interacted with, like media tracks or tickets and itineraries, to be available and usable even if getting a request to your server is hard. When a request isn't possible, they expect to be told there's trouble instead of silently failing or crashing.</p>
+
+                    <p>Users love apps that respond to interaction in the blink of an eye, and an experience they can depend on.</p>  
+                <h3>Installable</h3>    
+                <p>Installed Progressive Web Apps run in a standalone window instead of a browser tab. They're launchable from on the user's home screen, dock, taskbar, or shelf. It's possible to search for them on a device and jump between them with the app switcher, making them feel like part of the device they're installed on.</p>
+                <p>New capabilities open up after a web app is installed. Keyboard shortcuts usually reserved when running in the browser, become available. Progressive Web Apps can register to accept content from other applications, or to be the default application to handle different types of files.</p>
+                <p>When a Progressive Web App moves out of a tab and into a standalone app window, it transforms how users think about it and interact with it.</p>
+        </section>
+        <section class="pwa-features">
+            <h2>What makes a good Progressive Web App?</h2>
+            <p>Progressive Web Apps (PWA) are built and enhanced with modern APIs to deliver native-like capabilities, reliability, and installability while reaching anyone, anywhere, on any device with a single codebase.</p>
+            <h3>Core Progressive Web App checklist</h3>
+            <p>The Progressive Web App Checklist describes what makes an app installable and usable by all users, regardless of size or input type.</p>
+            <ul>
+                <li>
+                    <h4>Starts fast, stays fast</h4>
+                    <p>Performance plays a significant role in the success of any online experience, because high performing sites engage and retain users better than poorly performing ones. Sites should focus on optimizing for user-centric performance metrics.</p>
+                </li>
+                <li>
+                    <h4>Works in any browser</h4>
+                    <p>Users can use any browser they choose to access your web app before it's installed.</p>
+                </li>
+                <li>
+                    <h4>Responsive to any screen size</h4>
+                    <p>Users can use your PWA on any screen size and all of the content is available at any viewport size.</p>
+                </li>
+                <li>
+                    <h4>Provides a custom offline page</h4>
+                    <p>When users are offline, keeping them in your PWA provides a more seamless and native-like experience than dropping back to the default browser offline page.</p>
+                </li>
+                <li>
+                    <h4>Is installable</h4>
+                    <p>Users who install or add apps to their device tend to engage with those apps more.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="pwa-requirements">
+            <h2>What do you need to build a PWA?</h2>
+            <h3>Service Workers</h3>
+            <p>Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user’s device is offline.</p>
+            <p>They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a Promise-based approach.
+            <p>They can do a lot more than "just" offering offline capabilities, including handling notifications, performing heavy calculations on a separate thread, etc. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.</p>    
+
+            <h3>Web App Manifest</h3>
+            <p>The web app manifest is a JSON file that tells the browser about your Progressive Web App and how it should behave when installed on the user's desktop or mobile device. A typical manifest file includes the app name, the icons the app should use, and the URL that should be opened when the app is launched.</p>
+
+            <p>Manifest files are supported in Chrome, Edge, Firefox, UC Browser, Opera, and the Samsung browser. Safari has partial support.</p>
+        </section>
+        <footer>
+            <p>Useful Links to get you Started</p>   
+            <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0">Google Code Labs</a>
+            <a href="https://scotch.io/tutorials/the-ultimate-guide-to-progressive-web-applications">Scotch.io</a>
+            <a href="https://itnext.io/pwa-from-scratch-guide-yet-another-one-bdfa438b50aa">itnext</a>
+            <a href="https://developers.google.com/web/ilt/pwa">Google Devs</a>
+        </footer>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", function(){
+                navigator.serviceWorker.register('./service-worker.js').then(function(sw){
+                    console.log(sw);
+                })
+            })
+        }
+    </script>
+</body>
+</html>
